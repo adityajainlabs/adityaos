@@ -309,8 +309,10 @@ export function GithubWindow() {
 
       setData(payload);
       setLastSyncedAt(new Date());
-    } catch {
-      setError("Unable to load GitHub profile.");
+    } catch (loadError) {
+      setError(
+        loadError instanceof Error ? loadError.message : "Unable to load GitHub profile.",
+      );
     } finally {
       setIsLoading(false);
       setIsRefreshing(false);
@@ -338,7 +340,7 @@ export function GithubWindow() {
       <div className="flex h-full items-center justify-center p-6">
         <div className="w-full max-w-[460px] rounded-lg border-[0.5px] border-[var(--os-border)] bg-[var(--os-surface)] p-6 text-center">
           <p className="text-ui text-[16px] font-medium text-[var(--os-text)]">
-            Unable to load GitHub profile.
+            {error}
           </p>
           <button
             type="button"

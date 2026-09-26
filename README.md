@@ -104,6 +104,9 @@ UPSTASH_REDIS_REST_TOKEN=
 # Spotify (optional — embed fallback exists)
 SPOTIFY_CLIENT_ID=
 SPOTIFY_CLIENT_SECRET=
+
+# GitHub (optional — raises API rate limit for the GitHub window)
+GITHUB_TOKEN=
 ```
 
 Start the dev server:
@@ -134,8 +137,9 @@ npm run lint     # ESLint
 | `UPSTASH_REDIS_REST_TOKEN` | For likes & rate limits | Redis REST token |
 | `SPOTIFY_CLIENT_ID` | Optional | Spotify Web API |
 | `SPOTIFY_CLIENT_SECRET` | Optional | Spotify Web API |
+| `GITHUB_TOKEN` | Optional | GitHub REST API (higher rate limit) |
 
-Without Redis, the like counter and chat rate limiting won’t work fully. Without Spotify keys, the chart still tries an embed-based fallback.
+Without Redis, the like counter and chat rate limiting won’t work fully. Without Spotify keys, the chart still tries an embed-based fallback. Without `GITHUB_TOKEN`, GitHub calls use the unauthenticated 60 req/hour limit and can fail on shared IPs (e.g. Vercel).
 
 ---
 
