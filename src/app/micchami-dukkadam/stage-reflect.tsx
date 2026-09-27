@@ -35,11 +35,6 @@ const CHOICES = [
     hi: "और समझदारी दिखाई जा सकती थी",
   },
   {
-    id: "regret",
-    en: "I regret something I did",
-    hi: "कुछ ऐसा किया जिसका पछतावा है",
-  },
-  {
     id: "else",
     en: "Something else",
     hi: "कुछ और",
@@ -49,7 +44,6 @@ const CHOICES = [
 const copy = {
   en: {
     title: "Now, your turn.",
-    intro: "Think of one moment this year you wish you had handled differently.",
     prompt: "What would you have done differently?",
     reflect: "REFLECT",
     acknowledged: "You don't have to explain it.",
@@ -58,7 +52,6 @@ const copy = {
   },
   hi: {
     title: "अब, आपकी बारी।",
-    intro: "इस साल के एक पल को याद कीजिए, जिसे आप अलग तरह से निभाना चाहते।",
     prompt: "आप क्या अलग कर सकते थे?",
     reflect: "सोचिए",
     acknowledged: "आपको इसे समझाने की ज़रूरत नहीं।",
@@ -118,12 +111,9 @@ export function StageReflect({ onNext, lang }: { onNext: () => void; lang: Story
             >
               {text.title}
             </h1>
-            <p className={`mx-auto mt-6 max-w-md text-pretty text-[17px] leading-relaxed text-[#5e574e] ${body}`}>
-              {text.intro}
-            </p>
             <p
               id="reflect-prompt"
-              className={`mx-auto mt-8 max-w-md text-pretty text-[17px] leading-relaxed text-[#2a2622] ${body}`}
+              className={`mx-auto mt-6 max-w-md text-pretty text-[17px] leading-relaxed text-[#2a2622] ${body}`}
             >
               {text.prompt}
             </p>

@@ -17,14 +17,14 @@ import {
 
 const copy = {
   en: {
-    body: "Today, millions of Jains use these words to ask forgiveness for harm they may have caused — knowingly or unknowingly.",
+    body: "Today, millions of Jains use these words to ask forgiveness for harm they may have caused.",
     contrast: "Micchami Dukkadam ≠ just “Sorry.”",
     ask: "What does it really mean?",
     continue: "CONTINUE →",
     meanings: ["I REFLECT.", "I ACKNOWLEDGE.", "I ASK FORGIVENESS.", "I TRY TO DO BETTER."],
   },
   hi: {
-    body: "आज करोड़ों जैन इन शब्दों से क्षमा माँगते हैं — उस पीड़ा के लिए जो उन्होंने जानकर या अनजाने में पहुँचाई हो।",
+    body: "आज करोड़ों जैन इन शब्दों से क्षमा माँगते हैं — उस पीड़ा के लिए जो उन्होंने पहुँचाई हो।",
     contrast: "Micchami Dukkadam ≠ सिर्फ़ “माफ़ कीजिए।”",
     ask: "इसका असल मतलब क्या है?",
     continue: "आगे →",

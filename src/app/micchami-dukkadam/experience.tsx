@@ -7,12 +7,11 @@ import { useEffect, useRef, useState } from "react";
 import { StageBoth } from "./stage-both";
 import { StageClose } from "./stage-close";
 import { StageHook } from "./stage-hook";
-import { StageOrigin } from "./stage-origin";
 import { StageReflect } from "./stage-reflect";
 import { StageReveal } from "./stage-reveal";
 import { LangToggle, stageMotion, usePrefersReducedMotion, type StoryLang } from "./ui";
 
-const TOTAL = 6;
+const TOTAL = 5;
 
 export function Experience() {
   const [stage, setStage] = useState(0);
@@ -59,7 +58,7 @@ export function Experience() {
         className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain"
       >
         <div
-            className={`mx-auto flex min-h-full w-full max-w-xl flex-col justify-start px-6 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-8 ${stage === 5 ? "pt-4 sm:pt-10" : "pt-8 sm:pt-16"}`}
+            className={`mx-auto flex min-h-full w-full max-w-xl flex-col justify-start px-6 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-8 ${stage === 4 ? "pt-4 sm:pt-10" : "pt-8 sm:pt-16"}`}
             lang={lang}
           >
           <LangToggle
@@ -76,10 +75,9 @@ export function Experience() {
             >
               {stage === 0 ? <StageHook lang={lang} onNext={() => setStage(1)} /> : null}
               {stage === 1 ? <StageReveal lang={lang} onNext={() => setStage(2)} /> : null}
-              {stage === 2 ? <StageOrigin lang={lang} onNext={() => setStage(3)} /> : null}
-              {stage === 3 ? <StageReflect lang={lang} onNext={() => setStage(4)} /> : null}
-              {stage === 4 ? <StageBoth lang={lang} onNext={() => setStage(5)} /> : null}
-              {stage === 5 ? (
+              {stage === 2 ? <StageReflect lang={lang} onNext={() => setStage(3)} /> : null}
+              {stage === 3 ? <StageBoth lang={lang} onNext={() => setStage(4)} /> : null}
+              {stage === 4 ? (
                 <StageClose
                   lang={lang}
                   onAgain={() => {

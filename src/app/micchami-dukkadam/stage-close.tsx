@@ -20,8 +20,6 @@ I ask for forgiveness.`,
     again: "EXPERIENCE AGAIN",
     built: "Built by Aditya Jain",
     part: "Part of Aditya OS",
-    experiment: "A small experiment by Aditya Jain",
-    ecosystem: "Built inside the Aditya OS ecosystem.",
   },
   hi: {
     forgiveness: `जिस किसी को दुख पहुँचा हो,
@@ -37,8 +35,6 @@ I ask for forgiveness.`,
     again: "फिर से देखें",
     built: "Aditya Jain की रचना",
     part: "Aditya OS का हिस्सा",
-    experiment: "Aditya Jain का एक छोटा प्रयोग",
-    ecosystem: "Aditya OS के भीतर रचा गया।",
   },
 } as const;
 
@@ -106,8 +102,6 @@ export function StageClose({ onAgain, lang }: { onAgain: () => void; lang: Story
           <div className={`mt-6 text-[13px] leading-relaxed text-[#6d655c] ${lang === "hi" ? type : "tracking-wide"}`}>
             <p>{text.built}</p>
             <p>{text.part}</p>
-            <p className="mt-3 text-[12px] text-[#8a8176]">{text.experiment}</p>
-            <p className="text-[12px] text-[#8a8176]">{text.ecosystem}</p>
           </div>
         </>
       ) : null}
